@@ -3,7 +3,9 @@ import { loadFiles } from "./loadFiles.js";
 import { render } from "./render.js";
 
 await Promise.all([
-  loadFiles(tagsKit, tags, "html"),
+  loadFiles(tagsKit, tags, "html", {
+    content: "This is dynamic content!",
+  }),
   loadFiles(stylesKit, styles, "css"),
 ]);
 
